@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.mydemocompany</groupId>
-    <artifactId>taskapp</artifactId>
+    <artifactId>demotaskapp</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>taskapp</name>
     <description>taskapp</description>
