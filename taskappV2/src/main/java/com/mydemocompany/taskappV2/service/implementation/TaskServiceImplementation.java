@@ -4,9 +4,8 @@ import com.mydemocompany.taskappV2.entity.TaskEntity;
 import com.mydemocompany.taskappV2.repository.TaskRepository;
 import com.mydemocompany.taskappV2.service.TaskService;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
-import java.util.Optional;
+
 
 @Service
 public class TaskServiceImplementation  implements TaskService {
@@ -22,8 +21,8 @@ public class TaskServiceImplementation  implements TaskService {
     }
 
     @Override
-    public Optional<TaskEntity> findById(Long id) {
-        return taskRepo.findById(id);
+    public TaskEntity findById(Long id) {
+        return taskRepo.findById(id).orElse(new TaskEntity());
     }
 
     @Override

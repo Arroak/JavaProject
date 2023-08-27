@@ -21,7 +21,7 @@ public class TaskController {
         return taskService.findAllTask();
     }
     @GetMapping("/{id}")
-    public Optional<TaskEntity> findById(@PathVariable("id") Long id){
+    public TaskEntity findById(@PathVariable("id") Long id){
         return  taskService.findById(id);
     }
     @PostMapping

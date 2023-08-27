@@ -7,12 +7,9 @@ import java.util.Optional;
 
 public interface TaskService {
     List<TaskEntity> findAllTask();
-    Optional<TaskEntity> findById(Long id);
+    TaskEntity findById(Long id);
     TaskEntity saveTask(TaskEntity task);
     TaskEntity updateTask(TaskEntity task);
     void deleteTask(Long id);
-
-
-
 
 }
