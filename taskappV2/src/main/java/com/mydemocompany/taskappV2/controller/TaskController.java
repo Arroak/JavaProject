@@ -1,12 +1,8 @@
 package com.mydemocompany.taskappV2.controller;
-
 import com.mydemocompany.taskappV2.entity.TaskEntity;
 import com.mydemocompany.taskappV2.service.TaskService;
-import org.springframework.scheduling.config.Task;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/v1/task")

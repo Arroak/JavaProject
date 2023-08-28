@@ -1,11 +1,9 @@
 package com.mydemocompany.taskappV2.service.implementation;
-
 import com.mydemocompany.taskappV2.entity.TaskEntity;
 import com.mydemocompany.taskappV2.repository.TaskRepository;
 import com.mydemocompany.taskappV2.service.TaskService;
 import org.springframework.stereotype.Service;
 import java.util.List;
-
 
 @Service
 public class TaskServiceImplementation  implements TaskService {
@@ -32,7 +30,9 @@ public class TaskServiceImplementation  implements TaskService {
 
     @Override
     public TaskEntity updateTask(TaskEntity task) {
-        return taskRepo.save(task);
+        TaskEntity oldTask = taskRepo.getReferenceById(task.getId());
+        oldTask.setName(task.getName());
+        return taskRepo.save(oldTask);
     }
 
     @Override
